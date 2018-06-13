@@ -19,6 +19,10 @@ namespace SSLand
         }
 
         static int photosize = 160;
+        static private MainForm mainform;
+        static public void setMainFormInstance(MainForm mainForm) {
+            SecondStreetItemPanel.mainform = mainForm;
+        }
         private SecondStreetListItem item;
         public SecondStreetItemPanel(SecondStreetListItem item)
         {
@@ -91,7 +95,7 @@ namespace SSLand
 
         private void BuyButton_Click(object sender, EventArgs e)
         {
-            //MainForm.ExecuteBuyItem(item, false);
+            mainform.BuyItem(item);
         }
 
         //private void OpenSellerButton_Click(object sender, EventArgs e)

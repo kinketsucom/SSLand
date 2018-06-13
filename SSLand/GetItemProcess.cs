@@ -16,7 +16,7 @@ namespace SSLand
            var rst = new List<SecondStreetListItem>();
            try
            {
-               var searchrst = SecondStreetAPI.postNewItem();
+               var searchrst = MainForm.api.postNewItem();
                if (searchrst == null || searchrst.Count == 0) return rst;
                 //とりあえず全部返す
                 //rst = searchrst;
